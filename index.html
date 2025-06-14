@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('念一点.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        .welcome-message {
+            text-align: center;
+            color: #ffffff;
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+            padding: 30px 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .emoji {
+            font-size: 2rem;
+            position: absolute;
+            animation: float 3s ease-in-out infinite;
+        }
+        .emoji:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+        .emoji:nth-child(2) { top: 15%; right: 25%; animation-delay: 0.5s; }
+        .emoji:nth-child(3) { bottom: 20%; left: 15%; animation-delay: 1s; }
+        .emoji:nth-child(4) { bottom: 15%; right: 20%; animation-delay: 1.5s; }
+        .emoji:nth-child(5) { top: 30%; left: 30%; animation-delay: 2s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        @media (max-width: 600px) {
+            .welcome-message {
+                font-size: 2rem;
+                padding: 20px 30px;
+            }
+            .emoji {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-message">Welcome Visitor</div>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🌟</span>
+    <span class="emoji">😊</span>
+    <span class="emoji">🎈</span>
+    <span class="emoji">✨</span>
+</body>
+</html>
